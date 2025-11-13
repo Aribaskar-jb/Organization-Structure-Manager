@@ -1,0 +1,24 @@
+<div class="ds-single-select">
+  <div ngbDropdown class="d-inline-block">
+    <button
+      type="button"
+      class="btn btn-outline-primary dropdown-toggle"
+      id="singleSelectDropdown"
+      ngbDropdownToggle
+    >
+      {{ selected?.label || 'Select an option' }}
+    </button>
+
+    <div ngbDropdownMenu aria-labelledby="singleSelectDropdown">
+      @for(option of optionList(); track $index ){
+      <button
+        type="button"
+        class="dropdown-item"
+        (click)="selectOption(option)"
+        [class.active]="selected?.value === option.value"
+      >
+        {{ option.label }}</button
+      >}
+    </div>
+  </div>
+</div>

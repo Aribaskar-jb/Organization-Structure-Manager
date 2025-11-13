@@ -1,0 +1,20 @@
+<div class="ds-search-wrapper input-group">
+  <input
+    #searchInput
+    type="text"
+    [value]="searchValue()"
+    [placeholder]="placeholderText()"
+    class="ds-search-input"
+    (input)="onSearch()"
+  />
+@if(searchValue()){
+  <div class="input-group-append" >
+    <button
+      type="button"
+      class="ds-search-clear btn btn-outline-secondary"
+      (click)="clearSearch()"
+    >
+      <i class="fa-solid fa-xmark fa-xs" aria-hidden="true"></i>
+    </button>
+  </div>}
+</div>

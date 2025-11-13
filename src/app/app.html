@@ -1,0 +1,22 @@
+<div class="app-container">
+  <!-- Left Sidebar - Employee List -->
+  <div class="sidebar-left">
+    <app-employee-list-panel 
+      [employees]="employeeSingleStore.employees()" 
+      (searchQuery)="seachEvent($event)" 
+      (selectedTeam)="singSelectChage($event)" 
+      [teamsList]="employeeSingleStore.teamsList()" 
+      [filteredEmployees]="employeeSingleStore.filteredEmployeesList()"
+      [isLoading]="employeeSingleStore.isLoading()"
+    ></app-employee-list-panel>
+  </div>
+
+  <!-- Right Side - Organization Chart -->
+  <div class="chart-area">
+    <app-chart-viewer 
+      [chartData]="employeeSingleStore.chartData()"
+      [isLoading]="employeeSingleStore.isLoading()"
+      (managerChanged)="onManagerChanged($event)"
+    ></app-chart-viewer>
+  </div>
+</div>

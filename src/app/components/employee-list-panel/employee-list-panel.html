@@ -1,0 +1,48 @@
+<div class="employee-list-panel-container">
+  <!-- Header Section: Search and Filter -->
+  <div class="header-row">
+    <div class="search-wrapper">
+      <ds-search
+        [placeholderText]="'Search by name, designation, or team...'"
+        (onSeachEvent)="onSearch($event)"
+        [ngClass]="{ disabled: isLoading() }"
+      ></ds-search>
+    </div>
+
+    <div class="filter-wrapper">
+      <ds-single-select
+        [options]="teamsList()"
+        (selectionChange)="onTeamChange($event)"
+        [ngClass]="{ disabled: isLoading() }"
+      ></ds-single-select>
+    </div>
+  </div>
+
+  <!-- Cards Container Section: Scrollable -->
+  <div class="cards-container">
+    @if(filteredEmployees().length === 0) { @if(isLoading()){ @for (item of loader; track $index) {
+    <app-card-loader />} } @else {
+    <div class="empty-state">
+      <p>No employees found</p>
+    </div>
+    } } @else {
+    <div class="cards-grid">
+      @if(isLoading()){ @for (item of loader; track $index) {
+      <app-card-loader />} } @else{ @for(employee of filteredEmployees(); track employee.id) {
+      <ds-card [cardContent]="employeeCardTemplate">
+        <ng-template #employeeCardTemplate>
+          <div class="employee-card-content">
+            <h5>{{ employee.name }}</h5>
+            <p class="designation">{{ employee.designation }}</p>
+            <p class="team">{{ employee.team }}</p>
+            @if(employee.manager) {
+            <p class="manager">Manager ID: {{ employee.manager }}</p>
+            }
+          </div>
+        </ng-template>
+      </ds-card>
+      }}
+    </div>
+    }
+  </div>
+</div>

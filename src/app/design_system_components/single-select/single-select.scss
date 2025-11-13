@@ -1,0 +1,37 @@
+/* Styles for single-select component */
+$accent-color: #ff5a00;
+
+
+.ds-single-select {
+  .btn.dropdown-toggle {
+  background: linear-gradient(52deg, rgba(247, 99, 19, 0.897), rgba(247, 99, 19, 0.4));
+
+    color: inherit;
+    border:none;
+    color: white;
+  }
+
+  .dropdown-menu {
+    min-width: 12rem;
+  }
+
+  .dropdown-item {
+    &.active,
+    &:active {
+      background-color: $accent-color;
+      color: #fff !important;
+    }
+
+    &:hover {
+      background-color: lighten($accent-color, 10%);
+      color: #fff;
+    }
+  }
+
+  /* make the selected value on the button use accent background and white text */
+  .btn.selected {
+    background-color: $accent-color;
+    color: #fff;
+    border-color: $accent-color;
+  }
+}
