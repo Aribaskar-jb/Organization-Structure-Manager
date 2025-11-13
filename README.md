@@ -6,6 +6,8 @@ A modern, responsive Angular application for managing organizational hierarchies
 
 ## Video ref: https://drive.google.com/file/d/1gVKNWcyuUp8tYmFk4c_saWytfjkBfq3u/view?usp=sharing
 
+## Web site Url: https://magenta-nougat-ccb202.netlify.app/
+
 ## 📋 Table of Contents
 
 - [Tech Stack](#-tech-stack)
