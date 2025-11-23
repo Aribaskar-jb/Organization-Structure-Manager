@@ -32,12 +32,9 @@
       <ds-card [cardContent]="employeeCardTemplate">
         <ng-template #employeeCardTemplate>
           <div class="employee-card-content">
-            <h5>{{ employee.name }}</h5>
+            <p class="employee-name">{{ employee.name }}</p>
             <p class="designation">{{ employee.designation }}</p>
             <p class="team">{{ employee.team }}</p>
-            @if(employee.manager) {
-            <p class="manager">Manager ID: {{ employee.manager }}</p>
-            }
           </div>
         </ng-template>
       </ds-card>

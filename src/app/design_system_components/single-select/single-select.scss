@@ -1,14 +1,13 @@
 /* Styles for single-select component */
-$accent-color: #ff5a00;
+@import '../../../styles/colors';
 
+$accent-color: $bg-hover;
 
 .ds-single-select {
   .btn.dropdown-toggle {
-  background: linear-gradient(52deg, rgba(247, 99, 19, 0.897), rgba(247, 99, 19, 0.4));
-
-    color: inherit;
-    border:none;
-    color: white;
+    background-color: $white;
+    color: $black;
+    border: 1px solid $border-light;
   }
 
   .dropdown-menu {
@@ -19,19 +18,19 @@ $accent-color: #ff5a00;
     &.active,
     &:active {
       background-color: $accent-color;
-      color: #fff !important;
+      color: black !important;
     }
 
     &:hover {
-      background-color: lighten($accent-color, 10%);
-      color: #fff;
+      background-color: $accent-color;
+      color: black;
     }
   }
 
   /* make the selected value on the button use accent background and white text */
   .btn.selected {
     background-color: $accent-color;
-    color: #fff;
+    color: black;
     border-color: $accent-color;
   }
 }

@@ -1,0 +1,76 @@
+// Color Variables
+// Using semantic naming convention based on color families and intensity levels
+
+:root {
+  // Grays
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #ececf0;
+  --gray-300: #e9ebef;
+  --gray-400: #e0e4f0;
+  --gray-500: #d3d3d3;
+  --gray-600: #cacaca;
+  --gray-700: #999999;
+  --gray-800: #717182;
+  --gray-900: #666666;
+  --gray-950: #242424;
+  
+  --stone-50:#f9f9f9;
+  // Pure colors
+  --white: #ffffff;
+  --black: #222222;
+  
+  // Background colors
+  --bg-primary: #ffffff;
+  --bg-secondary: #e3e3e3;
+  --bg-tertiary: #ececf0;
+  --bg-hover: #e9ebef;
+  
+  // Border colors
+  --border-light: #e0e4f0;
+  --border-medium: #d3d3d3;
+  
+  // Text colors
+  --text-primary: #242424;
+  --text-secondary: #717182;
+  --text-tertiary: #999999;
+  --text-dark: #666666;
+  --text-light: #ffffff;
+  
+  // State colors
+  --hover-bg: rgba(0, 0, 0, 0.04);
+}
+
+// SCSS Variables (for backward compatibility)
+$gray-50: var(--gray-50);
+$gray-100: var(--gray-100);
+$gray-200: var(--gray-200);
+$gray-300: var(--gray-300);
+$gray-400: var(--gray-400);
+$gray-500: var(--gray-500);
+$gray-600: var(--gray-600);
+$gray-700: var(--gray-700);
+$gray-800: var(--gray-800);
+$gray-900: var(--gray-900);
+$gray-950: var(--gray-950);
+
+$stone-50: var(--stone-50);
+
+$white: var(--white);
+$black: var(--black);
+
+$bg-primary: var(--bg-primary);
+$bg-secondary: var(--bg-secondary);
+$bg-tertiary: var(--bg-tertiary);
+$bg-hover: var(--bg-hover);
+
+$border-light: var(--border-light);
+$border-medium: var(--border-medium);
+
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-tertiary: var(--text-tertiary);
+$text-dark: var(--text-dark);
+$text-light: var(--text-light);
+
+$hover-bg: var(--hover-bg);

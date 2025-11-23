@@ -1,5 +1,6 @@
 <div class="ds-search-wrapper input-group">
-  <input
+  <i class="fa-solid fa-magnifying-glass search-icon"></i>
+<input
     #searchInput
     type="text"
     [value]="searchValue()"
@@ -7,8 +8,8 @@
     class="ds-search-input"
     (input)="onSearch()"
   />
-@if(searchValue()){
-  <div class="input-group-append" >
+
+  <div class="input-group-append" [ngClass]="{ 'hidden': !searchValue() }">
     <button
       type="button"
       class="ds-search-clear btn btn-outline-secondary"
@@ -16,5 +17,5 @@
     >
       <i class="fa-solid fa-xmark fa-xs" aria-hidden="true"></i>
     </button>
-  </div>}
+  </div>
 </div>

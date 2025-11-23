@@ -80,7 +80,7 @@ export class ChartViewer implements AfterViewInit {
         go.Panel, 'Vertical', { margin: 10 },
         $(go.TextBlock, { margin: 4, stroke: '#e2e8f0', font: 'bold 16px sans-serif' }, new go.Binding('text', 'name')),
         $(go.TextBlock, { margin: 4, stroke: '#a0aec0', font: '14px sans-serif' }, new go.Binding('text', 'designation')),
-        $(go.TextBlock, { margin: 4, stroke: '#4fd1c5', font: 'italic 12px sans-serif' }, new go.Binding('text', 'team'))
+        $(go.TextBlock, { margin: 4, stroke: '#4fd1c5', font: '12px sans-serif' }, new go.Binding('text', 'team'))
       )
     );
 

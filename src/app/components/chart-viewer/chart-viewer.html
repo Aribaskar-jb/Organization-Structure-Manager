@@ -1,4 +1,2 @@
 @if(isLoading()) { <app-tree-loader />}
-<div #myDiagramDiv class="org-structure-tree" 
-[ngClass]="{ 'hidden': isLoading() }"
-></div>
+<div #myDiagramDiv class="org-structure-tree" [ngClass]="{ hidden: isLoading() }"></div>
